@@ -242,6 +242,14 @@ main:
 
     eors r4, r1, r1 ; son iguales por lo que se activara la bandera Z de es cero cuando son iguales, y ademas guarda el 0 en r4
     eors r5, r1, r0 ; r1 y r0 no contienen el mismo valor devuelve 1 y lo almacena en r5
+
+    //OTROS
+    ; BEQ NAME_FUNCION_LLAMAR  //BEQ  Salta a una dirección de destino si el bit de cero está activado (indicando que dos valores son iguales).
+    ; BNE NAME_FUNCION_LLAMAR  //BNE Salta a una dirección de destino si el bit de cero está desactivado (indicando que dos valores son diferentes).
+    ; BLT NAME_FUNCION_LLAMAR  //BLT Salta a una dirección de destino si el bit de negativo está activado (indicando que el primer operando es menor que el segundo).
+    ; BGT NAME_FUNCION_LLAMAR  //BGT Salta a una dirección de destino si el bit de negativo está desactivado y el bit de cero está desactivado (indicando que el primer operando es mayor que el segundo)
+    ; BCC NAME_FUNCION_LLAMAR  //BCC/BHS  Salta a una dirección de destino si el bit de acarreo está desactivado (indicando que no hubo acarreo en una operación aritmética).
+    ; BCS NAME_FUNCION_LLAMAR  //BCS/BLO Salta a una dirección de destino si el bit de acarreo está activado (indicando que hubo acarreo en una operación aritmética)
 */
 
 /*AND Y ANDS
@@ -263,8 +271,6 @@ ANDS r3, r0, r1    ;  r3 = r0 AND r1 = 1100 AND 1010 = 1000 (en binario: 1000)
                    ;  Se actualizan las banderas N y Z
                    ;  N = 0 (el resultado no es negativo)
                    ;  Z = 0 (el resultado no es cero)
-
-
 */
 
 
