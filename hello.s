@@ -367,3 +367,29 @@ ROR R0, #1
 ; SI POR EJEMPLO R0 ERA 1000 ENTONCES LO QUE HARA ES MOVER EL DE MAS A LA DERECHA A LA IZQUIERDA 0100 Y LUEGO MUEVE  LOS BITS
 ; 1 ESPACION A LA DERECHA QUE DARIA EL MISMO RESULTADO BASICAMENTE 0 SE MUEVE A 1, 1 SE MUEVE A 0, QUEDA 01, 0 SE MUEVE A 0 Y 0 SE MUEVE A 0 QUEDA 0100
 */
+
+
+/*
+IMPRIMI POR CONSOLA CON DECIMALES
+PRIMERO COMANDO
+
+set output-radix 10 //SOLO APLICA A LA SESION ACTUAL
+
+
+IMPRIMIR 
+ printf "r0: %d, r1: %d, r2: %d\n, r3: %d\n, r4: %d\n,r5: %d\n,r6: %d\n,", $r0, $r1, $r2, $r3, $r4, $r5, $r6
+ */
+
+
+ /*
+ saber si hubo overflow
+
+ .global main
+main:
+    MOV R0, #0x7FFFFFFF  // Valor máximo positivo para un entero de 32 bits
+    MOV R1, #1           // Valor a sumar
+
+    ADDS R2, R0, R1      // Realiza la suma y actualiza los flags
+
+    BVS handle_overflow  // Si ocurrió overflow, salta a handle_overflow
+   */
